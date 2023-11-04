@@ -1,0 +1,47 @@
+/* Estilos generales del menú */
+/* The animation code */
+@keyframes example {
+    from {color: #fff;}
+    to {color: #ff6600;}
+}
+
+nav {
+    background-color: #333; /* Color de fondo del menú */
+    position: fixed; /* Fija el menú en la parte superior de la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que el menú esté sobre otros elementos */
+}
+
+nav a {
+    animation-name: example;
+    animation-duration: 2s;
+    color: #ff6600;
+    text-decoration: none; /* Quita la subrayado de los enlaces */
+    padding: 10px 20px; /* Espaciado interno de los enlaces */
+    display: inline-block; /* Para que los enlaces se muestren en línea */
+}
+
+/* Estilos del menú desplegable (si es necesario) */
+ul.sub-menu {
+    display: none; /* Oculta el menú desplegable por defecto */
+}
+
+/* Estilos para los elementos del menú */
+ul.primary_menu_classes > li {
+    display: inline-block; /* Muestra los elementos del menú en línea */
+    position: relative;
+}
+
+ul.primary_menu_classes > li:hover ul.sub-menu {
+    display: block; /* Muestra el menú desplegable al pasar el ratón por encima */
+    position: absolute;
+    background-color: #333; /* Color de fondo del menú desplegable */
+    margin: 0;
+}
+
+ul.primary_menu_classes > li:hover ul.sub-menu li {
+    display: block; /* Muestra los elementos del menú desplegable en bloque */
+    white-space: nowrap; /* Evita que los elementos del menú desplegable se rompan */
+}
