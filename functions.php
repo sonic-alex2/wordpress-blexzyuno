@@ -1,6 +1,6 @@
 <?php
     //deshabilita el editor de gutembert
-    add_filter('use_block_editor_for_post', '__return_false', 10);
+    //add_filter('use_block_editor_for_post', '__return_false', 10);
 
     #Agrega la opcion de poder crear un menu desde el admin
     register_nav_menu('primary_menu','Menu principal');
